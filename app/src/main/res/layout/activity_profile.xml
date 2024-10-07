@@ -1,9 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddPostActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:title="Profile" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_toolbar"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/profile_user_name"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:minHeight="48dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/profile_user_contact_no"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="Contact No"
+            android:minHeight="48dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/profile_user_state"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="State"
+            android:minHeight="48dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/profile_user_city"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="City"
+            android:minHeight="48dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:typeface="monospace" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <Button
+                android:id="@+id/profile_update_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/colorError"
+                android:text="Cancel"
+                android:textSize="18sp"
+                android:typeface="monospace" />
+
+            <Button
+                android:id="@+id/profile_update_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:backgroundTint="@color/colorSuccess"
+                android:text="Update"
+                android:textSize="18sp"
+                android:typeface="monospace" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/profile_progress_bar"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorError"
+            android:max="100"
+            android:progress="50"
+            android:progressTint="@color/colorSuccess"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

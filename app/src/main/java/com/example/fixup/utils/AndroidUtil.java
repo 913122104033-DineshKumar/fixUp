@@ -19,7 +19,7 @@ public class AndroidUtil {
         src.startActivity(intent);
     }
     public static void showDialog(Context context, String title, String message, String positive,
-                                  String negative, Runnable positiveMethod, Runnable negativeMethod) {
+                                  String negative, Runnable negativeMethod, Runnable positiveMethod) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle(title)
                 .setMessage(message)
